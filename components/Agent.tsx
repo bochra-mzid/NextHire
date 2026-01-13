@@ -50,8 +50,6 @@ function Agent() {
 				{(callStatus === CallStatus.INACTIVE || callStatus === CallStatus.FINISHED) && (
 					<Button>Start Interview</Button>
 				)}
-				{callStatus === CallStatus.ACTIVE && <Button>End Interview</Button>}
-				{callStatus === CallStatus.CONNECTING && <Button>Connecting...</Button>}
 			</div>
 		</div>
 	);
