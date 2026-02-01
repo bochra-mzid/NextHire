@@ -5,7 +5,7 @@ import React, { ReactNode } from 'react';
 const AuthLayout = async ({ children }: { children: ReactNode }) => {
 	const isUserAuthenticated = await isAuthenticated();
 	if (isUserAuthenticated) {
-		redirect('/');
+		redirect('/jobs');
 	}
 	return <div className="flex justify-center items-center h-screen">{children}</div>;
 };

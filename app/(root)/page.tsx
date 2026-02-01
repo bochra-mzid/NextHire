@@ -1,5 +1,7 @@
+import { redirect } from 'next/navigation';
+
 function Page() {
-	return <>Home page</>;
+	redirect('/jobs');
 }
 
 export default Page;

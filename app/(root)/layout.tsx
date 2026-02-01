@@ -7,7 +7,11 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
 	if (!isUserAuthenticated) {
 		redirect('/sign-in');
 	}
-	return <>{children}</>;
+	return (
+		<div className="h-screen flex flex-col">
+			<main className="container mx-auto py-6 px-8 flex-1 flex flex-col">{children}</main>
+		</div>
+	);
 };
 
 export default RootLayout;

@@ -47,7 +47,7 @@ function AuthForm(props: AuthFormProps) {
 				}
 				await signIn({ email, idToken });
 				toast.success('Signed in successfully!');
-				router.push('/');
+				router.push('/jobs');
 			} else {
 				const { username, email, password } = values;
 				const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
