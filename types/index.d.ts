@@ -60,3 +60,32 @@ interface JobDetailsPageProps {
 		id: string;
 	}>;
 }
+
+interface InterviewsPageProps {
+	params: Promise<{
+		id: string;
+	}>;
+}
+
+interface InterviewsPageHeaderProps {
+	jobId: string;
+}
+
+interface InterviewListProps {
+	interviews: Interview[];
+	jobId: string;
+}
+
+interface Interview {
+	interviewId: string;
+	jobId: string;
+	title: string;
+	level: string;
+	userId: string;
+	type: 'technical' | 'behavioral' | 'mixed';
+	questionCount: number;
+	score?: number;
+	duration?: number;
+	createdAt: string;
+	completedAt?: string;
+}
