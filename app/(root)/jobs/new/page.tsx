@@ -1,20 +1,11 @@
-'use client';
-
-import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
 import JobForm from '@/components/JobForm';
+import BackButton from '@/components/BackButton';
 
 function NewJobPage() {
-	const router = useRouter();
-
 	return (
 		<div className="flex flex-col flex-1">
 			<div className="mb-4">
-				<Button variant="ghost" onClick={() => router.push('/jobs')}>
-					<ArrowLeft className="mr-2" />
-					Back to Jobs
-				</Button>
+				<BackButton />
 			</div>
 			<JobForm />
 		</div>

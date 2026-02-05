@@ -4,7 +4,8 @@ import { useRouter } from 'next/navigation';
 import { deleteJob } from '@/actions/job.action';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Code, FileText, MessageSquare, Pencil, Trash2 } from 'lucide-react';
+import { Code, FileText, MessageSquare, Pencil, Trash2 } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -36,10 +37,7 @@ function JobActions({ job, isEditing = false, setIsEditing }: JobActionsProps) {
 	return (
 		<>
 			<div className="mb-4 flex items-center justify-between">
-				<Button variant="ghost" onClick={() => router.push('/jobs')}>
-					<ArrowLeft className="mr-2" />
-					Back to Jobs
-				</Button>
+				<BackButton />
 				{!isEditing && (
 					<div className="flex gap-1">
 						<Button

@@ -2,7 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Play } from 'lucide-react';
+import { Play } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 function InterviewsPageHeader({ jobId }: InterviewsPageHeaderProps) {
 	const router = useRouter();
@@ -14,10 +15,7 @@ function InterviewsPageHeader({ jobId }: InterviewsPageHeaderProps) {
 	return (
 		<>
 			<div className="mb-6">
-				<Button variant="ghost" onClick={() => router.push(`/jobs/${jobId}`)} className="mb-4">
-					<ArrowLeft className="mr-2" />
-					Back to Job Details
-				</Button>
+				<BackButton />
 			</div>
 
 			<div className="mb-8">

@@ -76,16 +76,61 @@ interface InterviewListProps {
 	jobId: string;
 }
 
+type InterviewType = 'technical' | 'behavioral' | 'mixed';
+
 interface Interview {
 	interviewId: string;
 	jobId: string;
 	title: string;
 	level: string;
 	userId: string;
-	type: 'technical' | 'behavioral' | 'mixed';
+	type: InterviewType;
 	questionCount: number;
 	score?: number;
 	duration?: number;
 	createdAt: string;
 	completedAt?: string;
+	transcript?: string;
+	feedback?: string;
+	strengths?: string[];
+	improvements?: string[];
+	questionExamples?: {
+		question: string;
+		exampleAnswer: string;
+	}[];
+	questions: string[];
+	finalized?: boolean;
+}
+
+interface TranscriptMessage {
+	role: string;
+	content: string;
+	timestamp: number;
+}
+
+interface NewInterviewProps {
+	job: Job;
+	user: User;
+}
+
+interface NewInterviewPageProps {
+	params: Promise<{
+		id: string;
+	}>;
+}
+
+interface InterviewsPageHeaderProps {
+	jobId: string;
+}
+
+interface InterviewDetailProps {
+	interview: Interview;
+	job: Job;
+}
+
+interface InterviewDetailPageProps {
+	params: Promise<{
+		id: string;
+		interviewId: string;
+	}>;
 }
