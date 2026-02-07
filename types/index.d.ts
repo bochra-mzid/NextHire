@@ -156,3 +156,77 @@ interface ResumeAnalysis {
 interface OptimizeResumePageProps {
 	params: Promise<{ id: string }>;
 }
+
+interface TechnicalTestDetailProps {
+	test: TechnicalTest;
+	job: Job;
+}
+
+type TechnicalTestQuestionType = 'multiple-choice' | 'written' | 'riddles' | 'mixed';
+
+interface TechnicalTestQuestion {
+	id: string;
+	type: 'multiple-choice' | 'written' | 'riddle';
+	question: string;
+	options?: string[];
+	correctAnswer: string;
+	explanation: string;
+}
+
+interface TechnicalTestAnswer {
+	questionId: string;
+	userAnswer: string;
+	isCorrect: boolean;
+	feedback?: string;
+}
+
+interface TechnicalTest {
+	id: string;
+	jobId: string;
+	userId: string;
+	questionType: TechnicalTestQuestionType;
+	questions: TechnicalTestQuestion[];
+	answers: TechnicalTestAnswer[];
+	score: number;
+	totalQuestions: number;
+	createdAt: string;
+	completedAt?: string;
+	status: 'in-progress' | 'completed';
+	overallFeedback?: string;
+}
+interface TechnicalTestListProps {
+	tests: TechnicalTest[];
+	jobId: string;
+}
+
+interface EvaluationResult {
+	score: number;
+	correctCount: number;
+	totalQuestions: number;
+	answers: TechnicalTestAnswer[];
+	overallFeedback: string;
+}
+
+interface ActiveTechnicalTestProps {
+	test: TechnicalTest;
+	testId: string;
+}
+
+interface TechnicalTestConfigurationProps {
+	job: Job | null;
+	user: User | null;
+	onTestStarted: (testId: string, test: TechnicalTest) => void;
+}
+
+interface TechnicalTestDetailPageProps {
+	params: Promise<{
+		id: string;
+		testId: string;
+	}>;
+}
+
+interface TechnicalTestsPageProps {
+	params: Promise<{
+		id: string;
+	}>;
+}
