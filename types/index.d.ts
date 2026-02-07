@@ -134,3 +134,25 @@ interface InterviewDetailPageProps {
 		interviewId: string;
 	}>;
 }
+
+interface ResumeAnalysis {
+	overallScore: number;
+	summary: string;
+	strengths: string[];
+	weaknesses: string[];
+	suggestions: {
+		category: string;
+		issue: string;
+		recommendation: string;
+		priority: 'high' | 'medium' | 'low';
+	}[];
+	keywordMatch: {
+		matched: string[];
+		missing: string[];
+	};
+	tailoredSummary: string;
+}
+
+interface OptimizeResumePageProps {
+	params: Promise<{ id: string }>;
+}
