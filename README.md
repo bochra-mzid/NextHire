@@ -14,6 +14,37 @@ An AI-powered job application and interview preparation platform built with Next
   - Automated evaluation and scoring
 - **Resume Optimizer** - Upload your resume and get AI-powered suggestions to improve it for specific job descriptions
 
+### Authentication
+
+| |
+|:---:|
+| ![](public/screenshots/login.png) |
+
+### Job Management
+
+| | |
+|:---:|:---:|
+| ![](public/screenshots/jobs.png) | ![](public/screenshots/job-details.png) |
+
+### AI Mock Interviews
+
+| | | |
+|:---:|:---:|:---:|
+| ![](public/screenshots/interviews.png) | ![](public/screenshots/interview-configuration.png) | ![](public/screenshots/active-interview.png) |
+| ![](public/screenshots/interview-results1.png) | ![](public/screenshots/interview-results2.png) | |
+
+### Technical Tests
+
+| | | |
+|:---:|:---:|:---:|
+| ![](public/screenshots/tests.png) | ![](public/screenshots/test-configuration.png) | ![](public/screenshots/test-question.png) |
+| ![](public/screenshots/test-results.png) | | |
+
+### Resume Optimizer
+
+| | | |
+|:---:|:---:|:---:|
+| ![](public/screenshots/resume-optimizer.png) | ![](public/screenshots/resume-analysis1.png) | ![](public/screenshots/resume-analysis2.png) |
 ## Tech Stack
 
 - **Framework**: Next.js
